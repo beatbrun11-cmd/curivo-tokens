@@ -1,0 +1,67 @@
+{
+  "marke": {
+    "interactive-text": "#0C6B6B",
+    "interactive-text-hover": "#0A6060",
+    "interactive-text-active": "#084A4A",
+    "interactive-surface": "#E0F5F5",
+    "interactive-border": "#5B9A9A"
+  },
+  "flaechen": {
+    "surface-page": "#FAFBFA",
+    "surface-default": "#FFFFFF",
+    "surface-warm": "#F2F5F4",
+    "surface-light": "#F4F6F8",
+    "surface-blue": "#E2E8F0",
+    "surface-hervorhebung": "#FDE68A"
+  },
+  "schrift": {
+    "text-primary": "#1E293B",
+    "text-muted": "#5A697F"
+  },
+  "navigation": {
+    "nav-surface": "#FAFBFA",
+    "nav-divider": "#DAE2E0",
+    "nav-item": "#3A5E5E",
+    "nav-item-hover": "#E6ECEA",
+    "nav-active-surface": "#E0F5F5",
+    "nav-active-text": "#0C6B6B"
+  },
+  "status": {
+    "status-success-surface": "#E0ECE6",
+    "status-success-border": "#5B9A7C",
+    "status-success-text": "#0E6B3E",
+    "status-warning-surface": "#F3E7DE",
+    "status-warning-border": "#BE7E4A",
+    "status-warning-text": "#A34A00",
+    "status-danger-surface": "#F6E5E3",
+    "status-danger-border": "#CF726B",
+    "status-danger-text": "#B42318",
+    "status-info-surface": "#E1EAF5",
+    "status-info-border": "#5F8FCA",
+    "status-info-text": "#1A5FB4",
+    "status-neutral-surface": "#F2F5F4",
+    "status-neutral-border": "#C2CFCC",
+    "status-neutral-text": "#3A5E5E"
+  },
+  "dienstart": {
+    "dienst-frueh-surface": "#FFFFFF",
+    "dienst-frueh-border": "#8577C6",
+    "dienst-frueh-text": "#3F318A",
+    "dienst-spaet-surface": "#BCAFE4",
+    "dienst-spaet-border": "#4C3D8F",
+    "dienst-spaet-text": "#241A52",
+    "dienst-nacht-surface": "#2B2057",
+    "dienst-nacht-border": "#2B2057",
+    "dienst-nacht-text": "#FFFFFF"
+  },
+  "legacy": {
+    "brand-dark": "#1A2F4B",
+    "brand-primary": "#0066CC",
+    "brand-success": "#10B981",
+    "brand-warning": "#F59E0B",
+    "brand-danger": "#EF4444",
+    "brand-success-ink": "#047857",
+    "brand-warning-ink": "#B45309",
+    "brand-danger-ink": "#B91C1C"
+  }
+}

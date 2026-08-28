@@ -1,0 +1,29 @@
+{
+  "name": "@curivo/tokens",
+  "version": "1.0.0",
+  "description": "Die Farbwerte von Curivo. Eine Quelle fuer alle Module.",
+  "license": "UNLICENSED",
+  "private": false,
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" },
+    "./tailwind": { "types": "./dist/tailwind.d.ts", "default": "./dist/tailwind.js" },
+    "./farben.json": "./dist/farben.json"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beatbrun11-cmd/curivo-tokens.git"
+  }
+}
