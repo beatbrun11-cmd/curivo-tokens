@@ -11,7 +11,7 @@
  * machen, sagt die Kennung nicht. Wer einzelne Werte in seiner eigenen
  * Konfiguration ueberschreibt, zeigt trotz gleicher Kennung andere Farben.
  */
-export const VERSION = "1.1.0";
+export const VERSION = "1.1.1";
 
 /** Fingerabdruck der Farbwerte -- die ersten acht Stellen des SHA-256. */
 export const FARBSTAND = "41906acb";

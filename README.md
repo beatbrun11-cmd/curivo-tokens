@@ -9,7 +9,7 @@ ihre eigenen Bauteile mit.
 
 ```json
 "dependencies": {
-  "@curivo/tokens": "git+https://github.com/beatbrun11-cmd/curivo-tokens.git#v1.1.0"
+  "@curivo/tokens": "git+https://github.com/beatbrun11-cmd/curivo-tokens.git#v1.1.1"
 }
 ```
 
