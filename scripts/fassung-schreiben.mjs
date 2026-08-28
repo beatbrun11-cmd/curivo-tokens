@@ -14,8 +14,14 @@
  * Modul baut neu, das andere nicht -- beide sagen «1.0.3», und die Farben sind
  * verschieden.
  *
- * Darum traegt die Kennung einen Fingerabdruck der Farbwerte selbst. Gleiche
- * Kennung heisst dann: gleiche Farben. Nicht: gleiche Absicht.
+ * Darum traegt die Kennung einen Fingerabdruck der Farbwerte selbst.
+ *
+ * **Was sie damit sagt und was nicht.** Gleiche Kennung heisst: beide Module
+ * beziehen dieselbe QUELLE, Wert fuer Wert. Sie heisst NICHT, dass beide
+ * dieselben Farben zeigen -- ein Modul kann einzelne Werte in seiner eigenen
+ * Konfiguration ueberschreiben, und Voice tut das heute an sechs Stellen,
+ * bewusst, bis die optische Angleichung dran ist. Was ein Modul aus der Quelle
+ * macht, sagt die Kennung nicht.
  *
  * Aufruf: node scripts/fassung-schreiben.mjs
  *   -- als `prebuild` vor jedem Bauen
@@ -44,7 +50,9 @@ const inhalt = `/**
  *
  * Der Fingerabdruck ist der Teil, der etwas beweist: ein verschobenes Tag mit
  * geaenderten Farben traegt dieselbe Nummer, aber einen anderen Abdruck. Zwei
- * Module mit derselben KENNUNG zeigen dieselben Farben.
+ * Module mit derselben KENNUNG beziehen dieselbe Quelle -- was sie daraus
+ * machen, sagt die Kennung nicht. Wer einzelne Werte in seiner eigenen
+ * Konfiguration ueberschreibt, zeigt trotz gleicher Kennung andere Farben.
  */
 export const VERSION = ${JSON.stringify(manifest.version)};
 

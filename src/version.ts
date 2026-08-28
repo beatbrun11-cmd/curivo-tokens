@@ -7,7 +7,9 @@
  *
  * Der Fingerabdruck ist der Teil, der etwas beweist: ein verschobenes Tag mit
  * geaenderten Farben traegt dieselbe Nummer, aber einen anderen Abdruck. Zwei
- * Module mit derselben KENNUNG zeigen dieselben Farben.
+ * Module mit derselben KENNUNG beziehen dieselbe Quelle -- was sie daraus
+ * machen, sagt die Kennung nicht. Wer einzelne Werte in seiner eigenen
+ * Konfiguration ueberschreibt, zeigt trotz gleicher Kennung andere Farben.
  */
 export const VERSION = "1.1.0";
 
