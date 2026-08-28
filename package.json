@@ -1,6 +1,6 @@
 {
   "name": "@curivo/tokens",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Die Farbwerte von Curivo. Eine Quelle fuer alle Module.",
   "license": "UNLICENSED",
   "private": false,
@@ -24,7 +24,9 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "test": "vitest run",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "prebuild": "node scripts/fassung-schreiben.mjs",
+    "version": "node scripts/fassung-schreiben.mjs && git add src/version.ts"
   },
   "devDependencies": {
     "typescript": "^5.9.3",

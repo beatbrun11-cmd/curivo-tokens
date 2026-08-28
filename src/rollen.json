@@ -1,0 +1,21 @@
+{
+  "_": "Wofuer eine Flaeche da ist. Ohne diese Angabe muesste der Kontrast-Pruefer raten, und beide Antworten waeren falsch: nimmt er jede Flaeche als Grund fuer jedes Bauteil, meldet er Fehler fuer Kombinationen, die es nicht gibt; nimmt er nur drei, uebersieht er die uebrigen ganz. Jede Flaeche der Gruppe muss hier in mindestens einer Liste stehen -- `kontraste.mjs` bricht sonst ab.",
+
+  "textgruende": [
+    "surface-page",
+    "surface-default",
+    "surface-warm",
+    "surface-light",
+    "surface-blue",
+    "surface-hervorhebung"
+  ],
+  "_textgruende": "Flaechen, auf denen Schrift steht. `surface-blue` traegt an 21 Stellen `text-muted`; `surface-hervorhebung` ist der Textmarker im Fliesstext und traegt den markierten Text selbst.",
+
+  "bauteilgruende": [
+    "surface-page",
+    "surface-default",
+    "surface-warm",
+    "surface-light"
+  ],
+  "_bauteilgruende": "Flaechen, auf denen abgegrenzte Bauteile liegen -- Abzeichen, Karten, Felder. Deren Raender brauchen 3.0 gegen den Grund (WCAG 1.4.11). `surface-blue` ist selbst eine Abzeichenflaeche, `surface-hervorhebung` liegt im Fliesstext: auf keiner von beiden steht ein umrandetes Bauteil."
+}

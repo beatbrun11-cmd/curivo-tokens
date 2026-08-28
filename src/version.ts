@@ -1,18 +1,18 @@
 /**
- * Welche Fassung der Farben hier liegt.
+ * ERZEUGT von scripts/fassung-schreiben.mjs -- nicht von Hand aendern.
  *
- * **Wozu.** Flow und Voice sind zwei getrennte Repositories mit zwei getrennten
- * Auslieferungen. Beide beziehen diese Werte, aber nichts zwingt sie auf
- * dieselbe Fassung -- ausser man kann von aussen sehen, welche wo laeuft. Die
- * Module geben diesen Wert an ihren oeffentlichen Seiten aus; der Waechter
- * vergleicht sie und schlaegt an, wenn sie auseinanderlaufen.
+ * Die Kennung, die mit dem Paket reist und die beide Module an ihrer
+ * oeffentlichen Anmeldeseite ausgeben. Sie besteht aus der Fassungsnummer und
+ * einem Fingerabdruck der Farbwerte.
  *
- * Eine Absichtserklaerung in einer Manifestdatei taugt dafuer nicht: sie sagt,
- * was jemand aufgeschrieben hat, nicht was gebaut wurde. Dieser Wert reist mit
- * dem Paket und ist darum das, was wirklich laeuft.
- *
- * Er wird von Hand gepflegt und von `version.test.ts` gegen `package.json`
- * geprueft -- eine Fassung, die sich selbst falsch benennt, waere schlimmer
- * als gar keine.
+ * Der Fingerabdruck ist der Teil, der etwas beweist: ein verschobenes Tag mit
+ * geaenderten Farben traegt dieselbe Nummer, aber einen anderen Abdruck. Zwei
+ * Module mit derselben KENNUNG zeigen dieselben Farben.
  */
-export const VERSION = "1.0.3";
+export const VERSION = "1.1.0";
+
+/** Fingerabdruck der Farbwerte -- die ersten acht Stellen des SHA-256. */
+export const FARBSTAND = "41906acb";
+
+/** Was die Module ausgeben: Fassung und Farbstand zusammen. */
+export const KENNUNG = `${VERSION}+${FARBSTAND}`;

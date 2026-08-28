@@ -33,8 +33,25 @@ jobs:
 
       - name: Kontraste messen
         # Der eigentliche Grund fuer diesen Lauf: WCAG 2.1 verlangt 4.5 zu 1
-        # fuer Text und 3.0 fuer Raender an Bedienelementen. Eine
-        # halbtransparente Farbe hat nicht ihren eigenen Kontrast, sondern den
-        # ihrer Mischung mit dem Untergrund -- sie muss vor der Messung
-        # komponiert werden.
+        # fuer Text und 3.0 fuer Raender an Bauteilen.
+        #
+        # Halbtransparenz ist hier ausgeschlossen, nicht komponiert: das Skript
+        # lehnt jeden Wert ab, der nicht `#RRGGBB` ist. Wer Transparenz
+        # einfuehren will, muss zuerst die Komposition nachruesten -- sonst
+        # misst der Lauf eine Farbe, die nie zu sehen war.
         run: node scripts/kontraste.mjs
+
+      - name: Traegt das Tag die Fassung, die im Baum steht?
+        # Ein Tag entsteht ausserhalb dieses Laufs. `git tag v1.0.4` auf einem
+        # Baum, der 1.0.3 sagt, ergaebe sonst einen gruenen Lauf -- und der
+        # Fehler faellt erst beim Verbraucher auf, in einem fremden Repo.
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          set -euo pipefail
+          im_tag="${GITHUB_REF_NAME#v}"
+          im_baum=$(node -p "require('./package.json').version")
+          if [ "$im_tag" != "$im_baum" ]; then
+            echo "::error::Tag $GITHUB_REF_NAME, aber package.json sagt $im_baum."
+            exit 1
+          fi
+          echo "Tag und Fassung stimmen ueberein: $im_baum"

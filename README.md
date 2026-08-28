@@ -9,7 +9,7 @@ ihre eigenen Bauteile mit.
 
 ```json
 "dependencies": {
-  "@curivo/tokens": "git+https://github.com/beatbrun11-cmd/curivo-tokens.git#v1.0.3"
+  "@curivo/tokens": "git+https://github.com/beatbrun11-cmd/curivo-tokens.git#v1.1.0"
 }
 ```
 
@@ -62,9 +62,20 @@ schwebender Zweig hiesse, dass eine Farbänderung ungeprüft in laufende
 Anwendungen wandert.
 
 ```
+npm version <patch|minor|major>   # erzeugt version.ts mit und taggt
 npm run build && npm test && node scripts/kontraste.mjs
-git tag v1.0.3 && git push origin v1.0.3
+git push origin main --tags
 ```
+
+**Vor dem Tag, nicht danach.** Die CI laeuft auch auf dem Tag, aber da ist es
+schon oeffentlich und installierbar — der Lauf meldet dann nur noch, statt zu
+verhindern.
+
+**Beide Module in einem Zug anheben.** Der Erreichbarkeits-Waechter vergleicht
+alle 15 Minuten, was Voice, Flow-Log und Flow-Bill ausliefern. Zwischen dem
+ersten und dem letzten Deploy laufen sie tatsaechlich auseinander, und der
+Waechter sagt das auch — richtig, aber erwartet. Wer zwischen den Deploys
+Stunden verstreichen laesst, erzieht sich das Wegklicken an.
 
 Die Prüfung läuft auch in CI — bei jedem Push und bei jedem Tag. Was hier
 durchgeht, geht in alle Module gleichzeitig; ein Fehler ist dann nicht an einer
