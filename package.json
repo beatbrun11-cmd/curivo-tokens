@@ -1,6 +1,6 @@
 {
   "name": "@curivo/tokens",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Die Farbwerte von Curivo. Eine Quelle fuer alle Module.",
   "license": "UNLICENSED",
   "private": false,

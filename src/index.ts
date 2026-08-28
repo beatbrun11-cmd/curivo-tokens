@@ -48,3 +48,5 @@ export const alleFarben: Record<string, string> = Object.assign(
  */
 export const DIENSTARTEN = ["frueh", "spaet", "nacht"] as const;
 export type Dienstart = (typeof DIENSTARTEN)[number];
+
+export { VERSION } from "./version";

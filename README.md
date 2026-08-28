@@ -9,7 +9,7 @@ ihre eigenen Bauteile mit.
 
 ```json
 "dependencies": {
-  "@curivo/tokens": "git+https://github.com/beatbrun11-cmd/curivo-tokens.git#v1.0.2"
+  "@curivo/tokens": "git+https://github.com/beatbrun11-cmd/curivo-tokens.git#v1.0.3"
 }
 ```
 
@@ -63,7 +63,7 @@ Anwendungen wandert.
 
 ```
 npm run build && npm test && node scripts/kontraste.mjs
-git tag v1.0.2 && git push origin v1.0.2
+git tag v1.0.3 && git push origin v1.0.3
 ```
 
 Die Prüfung läuft auch in CI — bei jedem Push und bei jedem Tag. Was hier
