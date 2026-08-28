@@ -1,0 +1,40 @@
+# Was hier durchgeht, geht in ALLE Curivo-Module gleichzeitig.
+#
+# Ein Fehler in diesen Werten ist nicht an einer Stelle falsch, sondern
+# ueberall. Darum laeuft die Pruefung bei jedem Push und bei jedem Tag --
+# und nicht nur auf dem Rechner dessen, der gerade etwas aendert.
+name: Pruefen
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+
+jobs:
+  pruefen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: Bauen
+        # Die Verbraucher bauen das Paket bei der Installation. Schlaegt es
+        # hier fehl, schlaegt dort jede Installation fehl.
+        run: npm run build
+
+      - name: Pruefen
+        run: npm test
+
+      - name: Kontraste messen
+        # Der eigentliche Grund fuer diesen Lauf: WCAG 2.1 verlangt 4.5 zu 1
+        # fuer Text und 3.0 fuer Raender an Bedienelementen. Eine
+        # halbtransparente Farbe hat nicht ihren eigenen Kontrast, sondern den
+        # ihrer Mischung mit dem Untergrund -- sie muss vor der Messung
+        # komponiert werden.
+        run: node scripts/kontraste.mjs

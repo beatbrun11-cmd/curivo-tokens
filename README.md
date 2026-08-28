@@ -9,7 +9,7 @@ ihre eigenen Bauteile mit.
 
 ```json
 "dependencies": {
-  "@curivo/tokens": "github:beatbrun11-cmd/curivo-tokens#v1.0.0"
+  "@curivo/tokens": "git+https://github.com/beatbrun11-cmd/curivo-tokens.git#v1.0.2"
 }
 ```
 
@@ -62,6 +62,10 @@ schwebender Zweig hiesse, dass eine Farbänderung ungeprüft in laufende
 Anwendungen wandert.
 
 ```
-npm run build && npm test
-git tag v1.0.1 && git push origin v1.0.1
+npm run build && npm test && node scripts/kontraste.mjs
+git tag v1.0.2 && git push origin v1.0.2
 ```
+
+Die Prüfung läuft auch in CI — bei jedem Push und bei jedem Tag. Was hier
+durchgeht, geht in alle Module gleichzeitig; ein Fehler ist dann nicht an einer
+Stelle falsch, sondern überall.
