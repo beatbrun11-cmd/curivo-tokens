@@ -14,7 +14,7 @@
 export const VERSION = "1.1.1";
 
 /** Fingerabdruck der Farbwerte -- die ersten acht Stellen des SHA-256. */
-export const FARBSTAND = "41906acb";
+export const FARBSTAND = "789a6243";
 
 /** Was die Module ausgeben: Fassung und Farbstand zusammen. */
 export const KENNUNG = `${VERSION}+${FARBSTAND}`;

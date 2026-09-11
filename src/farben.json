@@ -12,7 +12,8 @@
     "surface-warm": "#F2F5F4",
     "surface-light": "#F4F6F8",
     "surface-blue": "#E2E8F0",
-    "surface-hervorhebung": "#FDE68A"
+    "surface-hervorhebung": "#FDE68A",
+    "surface-marke": "#F0F9F8"
   },
   "schrift": {
     "text-primary": "#1E293B",

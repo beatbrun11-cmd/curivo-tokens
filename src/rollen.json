@@ -7,9 +7,10 @@
     "surface-warm",
     "surface-light",
     "surface-blue",
-    "surface-hervorhebung"
+    "surface-hervorhebung",
+    "surface-marke"
   ],
-  "_textgruende": "Flaechen, auf denen Schrift steht. `surface-blue` traegt an 21 Stellen `text-muted`; `surface-hervorhebung` ist der Textmarker im Fliesstext und traegt den markierten Text selbst.",
+  "_textgruende": "Flaechen, auf denen Schrift steht. `surface-blue` traegt an 21 Stellen `text-muted`; `surface-hervorhebung` ist der Textmarker im Fliesstext und traegt den markierten Text selbst. `surface-marke` ist der mint-getoente Grund der Anmeldeseiten -- er traegt Ueberschrift, Fliesstext und die Wortmarke, aber kein umrandetes Bauteil: die Karte darauf hat Schatten statt Rand, die Felder liegen in der Karte auf Weiss.",
 
   "bauteilgruende": [
     "surface-page",
