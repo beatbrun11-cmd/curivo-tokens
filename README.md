@@ -34,9 +34,9 @@ FARBEN.status;                    // die Statusfamilie
 
 | Gruppe | Wofür |
 |---|---|
-| `marke` | Der Markenton in seinen Zuständen: Text, Hover, gedrückt, Fläche, Rand |
+| `marke` | Der Markenton in seinen Zuständen: Text, Hover, gedrückt, Fläche, Rand. Dazu seit 1.2.0 die türkise Hauptaktion `interactive-primary-*` (Fläche, Hover, Schrift), bisher nur in der Pflegeplanung benutzt |
 | `flaechen` | Grundflächen. Sie tragen keine Bedeutung |
-| `schrift` | Fliesstext und Nebentext |
+| `schrift` | Fliesstext und Nebentext. Seit 1.2.0 `text-ink`, das Petrol-Dunkel der Pflegeplanung V3 |
 | `navigation` | Die Schale |
 | `status` | Erfolg, Warnung, Fehler, Hinweis, neutral — je Fläche, Rand, Text |
 | `dienstart` | Früh, Spät, Nacht. Eine **Kategorie**, keine Bewertung |
