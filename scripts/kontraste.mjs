@@ -104,6 +104,9 @@ pruefungen.push(["weiss im Hover", alle["surface-default"], alle["interactive-te
 pruefungen.push(["weiss gedrueckt", alle["surface-default"], alle["interactive-text-active"], TEXT]);
 pruefungen.push(["Markenton auf getoenter Flaeche", alle["interactive-text"], alle["interactive-surface"], TEXT]);
 pruefungen.push(["Interaktionsrand gegen weiss", alle["interactive-border"], alle["surface-default"], NICHT_TEXT]);
+/** Die tuerkise Hauptaktion (Pflegeplanung V3): dunkle Schrift auf hellem Tuerkis, auch im Hover. */
+pruefungen.push(["Hauptaktion: Schrift auf Tuerkis", alle["interactive-primary-text"], alle["interactive-primary-surface"], TEXT]);
+pruefungen.push(["Hauptaktion: Schrift im Hover", alle["interactive-primary-text"], alle["interactive-primary-hover"], TEXT]);
 
 /** Schrift: jede Schriftfarbe auf jedem Grund, der Schrift traegt. */
 for (const grund of TEXTGRUENDE) {

@@ -4,7 +4,10 @@
     "interactive-text-hover": "#0A6060",
     "interactive-text-active": "#084A4A",
     "interactive-surface": "#E0F5F5",
-    "interactive-border": "#5B9A9A"
+    "interactive-border": "#5B9A9A",
+    "interactive-primary-surface": "#00B4B4",
+    "interactive-primary-hover": "#26C2C2",
+    "interactive-primary-text": "#0C3C3C"
   },
   "flaechen": {
     "surface-page": "#FAFBFA",
@@ -17,7 +20,8 @@
   },
   "schrift": {
     "text-primary": "#1E293B",
-    "text-muted": "#59687E"
+    "text-muted": "#59687E",
+    "text-ink": "#193B38"
   },
   "navigation": {
     "nav-surface": "#FAFBFA",
